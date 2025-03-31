@@ -1,0 +1,41 @@
+:root {
+  --background-color: #141414;
+  --main-color: #0040ff;
+  --side-color: #2c0078;
+  --third-color: #a80000;
+  background-color: var(--background-color);
+  color: var(--main-color);
+}
+
+.heading {
+  transition: all 0.5s ease-out;
+}
+.heading:hover {
+  color: var(--side-color);
+}
+
+.box {
+  display: inline-block;
+  margin-left: 100px;
+  width: 10px;
+  height: 100px;
+  background-color: var(--main-color);
+}
+#box1 {
+  animation: grow 2s 1 linear alternate;
+}
+#box2 {
+  animation: grow 2s 1s infinite linear alternate;
+}
+@keyframes grow {
+  0% {
+    background-color: var(--main-color);
+  }
+  50% {
+    width: 200px;
+    background-color: var(--third-color);
+  }
+  100% {
+    background-color: var(--side-color);
+  }
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg" href="images/page_icon.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="playable-elements.js" defer></script>
+    <script src="header.js" defer></script>
+    <title>SoG-website: main page</title>
+  </head>
+  <body>
+    <header class="header">
+      <div id="logo" class="logo">
+        <img src="icons/logo_icon.svg" id="logo-icon" alt="logo-icon" />
+        <img src="images/logo-sog.svg" id="logo-text" alt="logo-text" />
+      </div>
+      <div class="menu">
+        <input type="checkbox" class="switch" id="menu-toggle" />
+
+        <label for="menu-toggle" class="menu-button">
+          <div class="button">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </label>
+
+        <div class="menubar">
+          <div>
+            <a href="index.html" target="_blank" class="icon">
+              <img src="icons/home.svg" alt="Home page" />
+              <span class="icon-text">Home</span>
+            </a>
+          </div>
+          <div>
+            <a href="gallery.html" target="_blank" class="icon">
+              <img src="icons/gallery.svg" alt="Gallery page" />
+              <span class="icon-text">Gallery</span>
+            </a>
+          </div>
+          <div>
+            <a href="about-us.html" target="_blank" class="icon">
+              <img src="icons/about-us.svg" alt="About us page" />
+              <span class="icon-text">About</span>
+            </a>
+          </div>
+          <div>
+            <a href="form.html" target="_blank" class="icon">
+              <img src="icons/form.svg" alt="form page" />
+              <span class="icon-text">Form</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar">
+        <div>
+          <a href="index.html" target="_blank" class="icon">
+            <img src="icons/home.svg" alt="Home page" />
+            <span class="icon-text">Home</span>
+          </a>
+        </div>
+        <div>
+          <a href="gallery.html" target="_blank" class="icon">
+            <img src="icons/gallery.svg" alt="Gallery page" />
+            <span class="icon-text">Gallery</span>
+          </a>
+        </div>
+        <div>
+          <a href="about-us.html" target="_blank" class="icon">
+            <img src="icons/about-us.svg" alt="About us page" />
+            <span class="icon-text">About</span>
+          </a>
+        </div>
+        <div>
+          <a href="form.html" target="_blank" class="icon">
+            <img src="icons/form.svg" alt="form page" />
+            <span class="icon-text">Form</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Vibe into the stars</h2>
+      <p>
+        Vibe into the sky with our built-in music player, select local files and
+        enjoy it as you browse through the site.
+      </p>
+      <section class="Music-player-section">
+        <input
+          class="file-input"
+          id="audioFile-selector"
+          type="file"
+          accept="audio/mp3, audio/m4a"
+          multiple="multiple"
+        />
+        <br />
+        <h3>Toggle Music Player</h3>
+        <div class="music-player-elements">
+          <div class="music-player-switch">
+            <input type="checkbox" class="switch" id="music-player-switch" />
+            <label for="music-player-switch" class="slider-box"></label>
+          </div>
+          <div class="music-player">
+            <audio id="audioFile"></audio>
+            <div class="playback-button">
+              <input type="checkbox" class="switch" id="playback-switch" />
+              <label for="playback-switch" class="label">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </label>
+            </div>
+            <div id="timer">00:00/00:00</div>
+            <label class="range-slider">
+              <input type="range" value="0" class="progress-bar" />
+            </label>
+            <div class="volume">
+              <label class="range-slider">
+                <input type="range" value="100" id="volume-bar" />
+              </label>
+              <img
+                src="icons/volume-max.svg"
+                id="volume-icon"
+                alt="volume icon"
+              />
+            </div>
+            <div class="options">
+              <div class="options-button">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="options-menu">
+                <div class="playback-speed">
+                  Playback Speed
+                  <div class="speed-menu">
+                    <div>0.5x</div>
+                    <div>0.75x</div>
+                    <div>1.0x</div>
+                    <div>1.5x</div>
+                    <div>2.0x</div>
+                  </div>
+                </div>
+                <div class="download">Download</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <hr id="footer-line" />
+
+      <p>&copy; All rights reserved</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/svg" href="images/page_icon.svg" />
+    <script src="header.js" defer></script>
+    <title>SoG-website:form</title>
+  </head>
+  <body>
+    <header class="header">
+      <div id="logo" class="logo">
+        <img src="icons/logo_icon.svg" id="logo-icon" alt="logo-icon" />
+        <img src="images/logo-sog.svg" id="logo-text" alt="logo-text" />
+      </div>
+      <div class="menu">
+        <input type="checkbox" class="switch" id="menu-toggle" />
+
+        <label for="menu-toggle" class="menu-button">
+          <div class="button">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </label>
+
+        <div class="menubar">
+          <div>
+            <a href="index.html" class="icon">
+              <img src="icons/home.svg" alt="Home page" />
+              <span class="icon-text">Home</span>
+            </a>
+          </div>
+          <div>
+            <a href="gallery.html" class="icon">
+              <img src="icons/gallery.svg" alt="Gallery page" />
+              <span class="icon-text">Gallery</span>
+            </a>
+          </div>
+          <div>
+            <a href="about-us.html" class="icon">
+              <img src="icons/about-us.svg" alt="About us page" />
+              <span class="icon-text">About</span>
+            </a>
+          </div>
+          <div>
+            <a href="form.html" class="icon">
+              <img src="icons/form.svg" alt="form page" />
+              <span class="icon-text">Form</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar">
+        <div>
+          <a href="index.html" class="icon">
+            <img src="icons/home.svg" alt="Home page" />
+            <span class="icon-text">Home</span>
+          </a>
+        </div>
+        <div>
+          <a href="gallery.html" class="icon">
+            <img src="icons/gallery.svg" alt="Gallery page" />
+            <span class="icon-text">Gallery</span>
+          </a>
+        </div>
+        <div>
+          <a href="about-us.html" class="icon">
+            <img src="icons/about-us.svg" alt="About us page" />
+            <span class="icon-text">About</span>
+          </a>
+        </div>
+        <div>
+          <a href="form.html" class="icon">
+            <img src="icons/form.svg" alt="form page" />
+            <span class="icon-text">Form</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <form
+        action="index.php"
+        method="post"
+        class="form"
+        enctype="multipart/form-data"
+      >
+        <div class="username">
+          <label for="username">Username:</label>
+          <input
+            id="username"
+            type="text"
+            placeholder="SoG"
+            minlength="3"
+            maxlength="15"
+            required
+          />
+        </div>
+        <div class="password">
+          <label for="password">Password:</label
+          ><input
+            type="password"
+            id="password"
+            minlength="6"
+            maxlength="12"
+            required
+          />
+        </div>
+        <div class="email">
+          <label for="email">e-mail</label>
+          <input type="email" placeholder="yourmail@gmail.com" />
+        </div>
+        <div class="phone">
+          <label for="phone">Phone number:</label>
+          <input
+            type="tel"
+            name="phone-number"
+            id="phone"
+            placeholder="86 123 4567"
+          />
+        </div>
+        <div class="bday">
+          <label for="bday">birth date:</label>
+          <input type="date" id="bday" />
+        </div>
+
+        <div class="title">
+          <label for="title">title:</label>
+          <span>
+            <input type="radio" name="title" id="Mr." value="Mr." />
+            <label for="Mr.">Mr.</label>
+          </span>
+          <span>
+            <input type="radio" name="title" id="Ms." value="Ms." />
+            <label for="Ms.">Ms.</label>
+          </span>
+          <span>
+            <input type="radio" name="title" id="Dr." value="Dr." />
+            <label for="Dr.">Dr.</label>
+          </span>
+        </div>
+        <div class="payment">
+          <label for="payment">payment method</label>
+          <select name="payment" id="payment">
+            <option value="visa">visa</option>
+            <option value="giftcard">giftcard</option>
+            <option value="mastercard">mastercard</option>
+          </select>
+        </div>
+        <div class="subscribe">
+          <input
+            type="checkbox"
+            name="subscribe"
+            class="checkbox"
+            id="subscribe"
+          />
+          <label for="subscribe">subscribe<span></span></label>
+        </div>
+        <div class="file">
+          <input
+            type="file"
+            name="file"
+            class="file-input"
+            id="file"
+            accept="image/jpg, image/png, audio/mp3"
+          />
+        </div>
+        <div class="reset"><input type="reset" /></div>
+        <div class="submit"><input type="submit" /></div>
+      </form>
+      <br />
+    </main>
+    <footer>
+      <hr id="footer-line" />
+      <p>&copy; All rights reserved</p>
+    </footer>
+  </body>
+</html>
